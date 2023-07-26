@@ -45,7 +45,7 @@ class Data_preprocessing:
         
     def data_normalization(self):
         data_transforms = transforms.Compose([
-        transforms.Resize(size=self.config.params_image_size, interpolation=Image.BILINEAR),
+        transforms.Resize(size=(224,224), interpolation=Image.BILINEAR),
         transforms.ToTensor(),
         transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5))
         ])

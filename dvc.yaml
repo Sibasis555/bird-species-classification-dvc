@@ -1,9 +1,16 @@
 stages:
+  trail:
+    cmd: python src/bird_classification/trail.py
+    deps:
+      - src/
   data_ingestion:
     cmd: python src/bird_classification/pipeline/stage_01_data_ingestion.py
     deps:
       - src/bird_classification/pipeline/stage_01_data_ingestion.py
+      - src/bird_classification/entity/
       - src/bird_classification/utils/config.yaml
+      - src/
+      # - src/bird_classification/entity/
     outs:
       - artifacts/data_ingestion/dummy_bird_species
 

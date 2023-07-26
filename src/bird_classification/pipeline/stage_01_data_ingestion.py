@@ -1,4 +1,8 @@
+# from src.bird_classification.components.data_ingestion import DataIngestionConfig
+import os
+print(os.listdir())
 from src.bird_classification.entity.config_entity import DataIngestionConfig
+# from entity.config_entity import DataIngestionConfig
 from src.bird_classification.utils.common import create_directories
 from src.bird_classification.utils import *
 from src.bird_classification.components.data_ingestion import DataIngestion
