@@ -1,0 +1,14 @@
+pandas 
+dvc
+numpy
+matplotlib
+seaborn
+pyYAML
+tqdm
+types-PyYAML
+scipy
+Flask
+Flask-Cors
+ensure==1.0.2
+torch
+torchvision
