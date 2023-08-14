@@ -4,8 +4,8 @@ from torchvision import transforms,datasets
 from PIL import Image
 import os
 import cv2
-from src.bird_classification.utils.common import create_directories
-from src.bird_classification.utils import *
+from bird_classification.utils.common import create_directories
+from bird_classification.utils import *
 
 class PredictionPipeline:
     def __init__(self,filename):

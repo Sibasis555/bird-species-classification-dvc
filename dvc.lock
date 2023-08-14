@@ -2,3 +2,68 @@ schema: '2.0'
 stages:
   trail:
     cmd: python src/trail.py
+  data_ingestion:
+    cmd: python src/bird_classification/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: src/bird_classification/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 7283edc0b715ff0d2348518b3be5cb54
+      size: 1732
+    - path: src/bird_classification/utils/config.yaml
+      hash: md5
+      md5: 81fe7c0788edc79321bfcd336bf4e1d6
+      size: 1081
+    outs:
+    - path: artifacts/data_ingestion/dummy_bird_species
+      hash: md5
+      md5: adf4588dbc53c178762eefb27927d07c.dir
+      size: 55633474
+      nfiles: 577
+  prepare_base_model:
+    cmd: python src/bird_classification/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: src/bird_classification/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: 836dd7cf3e6da08644b75936a8cc8d25
+      size: 2173
+    - path: src/bird_classification/utils/config.yaml
+      hash: md5
+      md5: 81fe7c0788edc79321bfcd336bf4e1d6
+      size: 1081
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 322f11aab2dd36f125c61c7e426a1805.dir
+      size: 475393286
+      nfiles: 2
+  training:
+    cmd: python src/bird_classification/pipeline/stage_03_model_training.py
+    deps:
+    - path: artifacts/data_ingestion/dummy_bird_species/Test
+      hash: md5
+      md5: b546e6c001782795387368f031c9be17.dir
+      size: 10349123
+      nfiles: 116
+    - path: artifacts/data_ingestion/dummy_bird_species/Train
+      hash: md5
+      md5: 9ceab1e68a87ab0c40b35c52ac938cad.dir
+      size: 45284351
+      nfiles: 461
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 322f11aab2dd36f125c61c7e426a1805.dir
+      size: 475393286
+      nfiles: 2
+    - path: src/bird_classification/pipeline/stage_03_model_training.py
+      hash: md5
+      md5: d46e7849bb75d7ece412a2169e37c6de
+      size: 2674
+    - path: src/bird_classification/utils/config.yaml
+      hash: md5
+      md5: 81fe7c0788edc79321bfcd336bf4e1d6
+      size: 1081
+    outs:
+    - path: artifacts/training/model.pth
+      hash: md5
+      md5: a4706e4691fa27938f88bbd0b0f58781
+      size: 233581741

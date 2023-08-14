@@ -1,9 +1,9 @@
 import os
 import urllib.request as request
 import zipfile
-from src.bird_classification import logger
-from src.bird_classification.utils.common import get_size
-from src.bird_classification.entity.config_entity import DataIngestionConfig
+from bird_classification import logger
+from bird_classification.utils.common import get_size
+from bird_classification.entity.config_entity import DataIngestionConfig
 from pathlib import Path
 
 # Data ingestion related functions

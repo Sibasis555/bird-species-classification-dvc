@@ -1,6 +1,6 @@
 import os
 import yaml
-from src.bird_classification import logger
+from bird_classification import logger
 import json
 from ensure import ensure_annotations
 from pathlib import Path

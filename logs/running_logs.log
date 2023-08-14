@@ -296,3 +296,27 @@ ValueError: If size is a sequence, it should have 1 or 2 values
 [2023-07-26 11:10:49,322: INFO: common: created directory at: artifacts\training]
 [2023-07-26 11:31:46,764: INFO: main: >>>>>> stage Training completed <<<<<<
 ]
+[2023-08-11 14:39:59,929: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-11 14:39:59,929: INFO: common: created directory at: artifacts]
+[2023-08-11 14:39:59,929: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-11 14:39:59,929: INFO: data_ingestion: File already exists of size: ~ 53463 KB]
+[2023-08-11 14:40:00,399: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+]
+[2023-08-11 14:40:12,934: INFO: stage_02_prepare_base_model: *******************]
+[2023-08-11 14:40:12,934: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2023-08-11 14:40:12,934: INFO: common: created directory at: artifacts]
+[2023-08-11 14:40:12,934: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-08-11 14:40:14,538: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+]
+[2023-08-11 14:44:27,251: INFO: stage_03_model_training: *******************]
+[2023-08-11 14:44:27,251: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-08-11 14:44:27,251: INFO: common: created directory at: artifacts]
+[2023-08-11 14:44:27,256: INFO: common: created directory at: artifacts\training]
+[2023-08-11 17:04:17,512: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+]
+[2023-08-11 17:18:22,738: INFO: stage_03_model_training: *******************]
+[2023-08-11 17:18:22,739: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-08-11 17:18:22,739: INFO: common: created directory at: artifacts]
+[2023-08-11 17:18:22,739: INFO: common: created directory at: artifacts\training]
+[2023-08-11 17:41:30,074: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+]

@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torchvision import models
-from src.bird_classification.entity.config_entity import PrepareBaseModelConfig
+from bird_classification.entity.config_entity import PrepareBaseModelConfig
 from collections import OrderedDict
 
 class PrepareBaseModel:

@@ -1,11 +1,10 @@
 import os
-# import tensorflow as tf
 import torch
 from torch.utils.tensorboard import SummaryWriter
 from torchvision import transforms
 from torch.utils.data import Dataset, DataLoader
 from PIL import Image
-from src.bird_classification.entity.config_entity import TrainingConfig
+from bird_classification.entity.config_entity import TrainingConfig
 
 class ImageDataset(Dataset):
     def __init__(self, data_folder, transform):

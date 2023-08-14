@@ -1,8 +1,8 @@
-from src.bird_classification.utils import *
-from src.bird_classification.utils.common import create_directories
-from src.bird_classification.entity.config_entity import PrepareBaseModelConfig
-from src.bird_classification import logger
-from src.bird_classification.components.prepare_base_model import PrepareBaseModel
+from bird_classification.utils import *
+from bird_classification.utils.common import create_directories
+from bird_classification.entity.config_entity import PrepareBaseModelConfig
+from bird_classification import logger
+from bird_classification.components.prepare_base_model import PrepareBaseModel
 
 STAGE_NAME = "Prepare base model"
 

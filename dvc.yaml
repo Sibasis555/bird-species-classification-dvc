@@ -1,15 +1,11 @@
 stages:
-  trail:
-    cmd: python src/bird_classification/trail.py
-    deps:
-      - src/
   data_ingestion:
     cmd: python src/bird_classification/pipeline/stage_01_data_ingestion.py
     deps:
       - src/bird_classification/pipeline/stage_01_data_ingestion.py
-      - src/bird_classification/entity/
+      # - src/bird_classification/entity/
       - src/bird_classification/utils/config.yaml
-      - src/
+      # - src/
       # - src/bird_classification/entity/
     outs:
       - artifacts/data_ingestion/dummy_bird_species
@@ -20,8 +16,8 @@ stages:
     deps:
       - src/bird_classification/pipeline/stage_02_prepare_base_model.py
       - src/bird_classification/utils/config.yaml
-    params:
-      - CLASSES
+    # params:
+    #   - CLASSES
     outs:
       - artifacts/prepare_base_model
 
@@ -31,15 +27,15 @@ stages:
     cmd: python src/bird_classification/pipeline/stage_03_model_training.py
     deps:
       - src/bird_classification/pipeline/stage_03_model_training.py
-      - config/config.yaml
+      - src/bird_classification/utils/config.yaml
       - artifacts/data_ingestion/dummy_bird_species/Train
       - artifacts/data_ingestion/dummy_bird_species/Test
       - artifacts/prepare_base_model
-    params:
-      - IMAGE_SIZE
-      - EPOCHS
-      - BATCH_SIZE
-      - LEARNING_RATE
-      - MOMENTUM
+    # params:
+    #   - IMAGE_SIZE
+    #   - EPOCHS
+    #   - BATCH_SIZE
+    #   - LEARNING_RATE
+    #   - MOMENTUM
     outs:
-      - artifacts/training/model.h5
+      - artifacts/training/model.pth

@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/bird_classification/__init__.py
+src/bird_classification/trail.py
+src/bird_classification.egg-info/PKG-INFO
+src/bird_classification.egg-info/SOURCES.txt
+src/bird_classification.egg-info/dependency_links.txt
+src/bird_classification.egg-info/top_level.txt
+src/bird_classification/utils/__init__.py
+src/bird_classification/utils/common.py

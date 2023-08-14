@@ -1,8 +1,8 @@
-from src.bird_classification import logger
-from src.bird_classification.components.model_training import Data_preprocessing, Training
-from src.bird_classification.utils import *
-from src.bird_classification.utils.common import create_directories
-from src.bird_classification.entity.config_entity import TrainingConfig
+from bird_classification import logger
+from bird_classification.components.model_training import Data_preprocessing, Training
+from bird_classification.utils import *
+from bird_classification.utils.common import create_directories
+from bird_classification.entity.config_entity import TrainingConfig
 from pathlib import Path
 
 STAGE_NAME = "Training"
